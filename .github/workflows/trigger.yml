@@ -1,4 +1,19 @@
 name: Test run-ci-action
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
+
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger run on platform
+        uses: your-org/run-ci-action@main
+        with:
+          api_key: ${{ secrets.SEDSTART_API }}
+          project_id: 267
+          test_id: 1180
+          profile_id: 327
+          browser: chrome
+          headless: true
+
