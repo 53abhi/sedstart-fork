@@ -48,7 +48,7 @@ jobs:
 
             curl --no-buffer -X POST \
               "$SEDSTART_BASE_URL/api/project/<< parameters.project_id >>/runCI" \
-              -H "X-API-Key: $SEDSTART_API_KEY" \
+              -H "Authorization: APIKey $SEDSTART_API" \
               -H "Content-Type: application/json" \
               --data "{
                 \"project_id\": << parameters.project_id >>,
