@@ -1,0 +1,20 @@
+name: Sedstart QA
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sedstart-run:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Trigger SedStart test run
+        uses: DasTapan09/runlocal@main
+        with:
+          api_key: ${{ secrets.SEDSTART_API }}
+          project_id: 364
+          test_id: 1629
+          profile_id: 616
+          environment: QA
