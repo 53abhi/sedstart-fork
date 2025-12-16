@@ -1,4 +1,4 @@
-name: Sedstart QA
+name: Sedstart Local Windows
 
 on:
   workflow_dispatch:
