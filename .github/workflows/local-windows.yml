@@ -17,5 +17,5 @@ jobs:
           project_id: 612
           test_id: 4876
           profile_id: 1017
-          browser: msedge
+          browser: "msedge"
           headless: true
