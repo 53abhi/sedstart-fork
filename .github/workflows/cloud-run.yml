@@ -1,4 +1,4 @@
-name: Sedstart Cloud 
+name: Sedstart QA
 
 on:
   workflow_dispatch:
@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger SedStart test run
-        uses: sedstart/runcloud@main
+        uses: sedstart/runcloud@v1
         with:
-          api_key: ${{ secrets.SEDSTART_API }}
+          api_key: \${{ secrets.SEDSTART_API }}
           project_id: 463
           test_id: 2145
           profile_id: 951
-          browser: "chrome"
-          environment: QA
+          browser: chrome
+          headless: false
